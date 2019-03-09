@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Приложение 100</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Настройки</string>
+    <string name="Метка">Метка</string>
+    <string name="Заполнить">Заполнить</string>
+    <string name="Звание">Звание</string>
+    <string name="Фамилия">Фамилия</string>
+    <string name="Имя">Имя</string>
+    <string name="datetime">Время ранения</string>
+    <string name="antibiotic">Антибиотик</string>
+    <string name="Comm">Произведено:</string>
+    <string name="anatoxin_name">Анатоксин (какой))</string>
+    <string name="anatoxin_doze">Доза анатоксина</string>
+    <string name="antidote_name">Антидот (какой)</string>
+    <string name="antidote_doze">Доза антидота</string>
+    <string name="anaestetic">Обезболивающие средства</string>
+    <string name="wound_location">Место ранения</string>
+    <string name="diagnosis">Диагноз</string>
+
+    <string-array name="ser">
+        <item>ПСС</item>
+        <item>ПГС</item>
+    </string-array>
+
+    <string-array name="evac">
+        <item>Лежа</item>
+        <item>Сидя</item>
+    </string-array>
+
+    <string-array name="queue">
+        <item>1 очередь</item>
+        <item>2 очередь</item>
+        <item>3 очередь</item>
+    </string-array>
+
+    <string-array name="transport">
+        <item>Грузавто</item>
+        <item>Сангрузавто</item>
+        <item>Корабль</item>
+        <item>Вертолет</item>
+        <item>Самолет</item>
+    </string-array>
+
+    <string-array name="commit">
+        <item>Переливание крови</item>
+        <item>Кровозаменителей</item>
+        <item>Иммобилизация</item>
+        <item>Перевязка</item>
+        <item>Жгут наложен</item>
+        <item>Санобработка</item>
+    </string-array>
+
+    <string-array name="wound">
+        <item>О</item>
+        <item>Я</item>
+        <item>Х</item>
+        <item>Бак</item>
+        <item>Другие пораж.</item>
+        <item>Отм</item>
+        <item>Б</item>
+        <item>И</item>
+    </string-array>
+
+    <string-array name="place">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+</resources>
