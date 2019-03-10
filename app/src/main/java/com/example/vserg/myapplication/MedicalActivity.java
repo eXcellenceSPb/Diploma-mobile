@@ -187,6 +187,27 @@ public class MedicalActivity extends AppCompatActivity implements NavigationView
                 mInfo = String.valueOf(s);
             }
         });
+
+        Spinner com =  findViewById(R.id.comm);
+        mComm = com.getSelectedItem().toString();
+
+        Spinner ser =  findViewById(R.id.serrum);
+        mSer = ser.getSelectedItem().toString();
+
+        Spinner woun =  findViewById(R.id.wound);
+        wound = woun.getSelectedItem().toString();
+
+        Spinner evac =  findViewById(R.id.evac);
+        mEvac = evac.getSelectedItem().toString();
+
+        Spinner plac =  findViewById(R.id.place);
+        mPlace = plac.getSelectedItem().toString();
+
+        Spinner transp =  findViewById(R.id.transport);
+        mTransport = transp.getSelectedItem().toString();
+
+        Spinner queu =  findViewById(R.id.queue);
+        mQueue = queu.getSelectedItem().toString();
     }
 
     public void initialize(){
