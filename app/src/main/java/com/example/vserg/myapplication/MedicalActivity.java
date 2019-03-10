@@ -6,12 +6,15 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -65,6 +68,125 @@ public class MedicalActivity extends AppCompatActivity implements NavigationView
         initialize();
 
         ///чтение из полей доделать
+        EditText time = findViewById(R.id.time);
+        time.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mTime = String.valueOf(s);
+            }
+        });
+
+        EditText antib = findViewById(R.id.antib);
+        antib.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mAntib = String.valueOf(s);
+            }
+        });
+
+        EditText anatoxname = findViewById(R.id.anatoxname);
+        anatoxname.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mAnatoxName = String.valueOf(s);
+            }
+        });
+
+        EditText anatoxdoze = findViewById(R.id.anatoxdoze);
+        anatoxdoze.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mAnatoxDoze = String.valueOf(s);
+            }
+        });
+
+        EditText antidotename = findViewById(R.id.antidotname);
+        antidotename.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mAntidoteName = String.valueOf(s);
+            }
+        });
+
+        EditText antidotedoze = findViewById(R.id.antidotedoze);
+        antidotedoze.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mAntidoteDoze = String.valueOf(s);
+            }
+        });
+
+        EditText anaest = findViewById(R.id.anaest);
+        anaest.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mAnaest = String.valueOf(s);
+            }
+        });
+
+        EditText location = findViewById(R.id.location);
+        location.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mLocation = String.valueOf(s);
+            }
+        });
+
+        EditText diagnos = findViewById(R.id.diag);
+        diagnos.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mDiag = String.valueOf(s);
+            }
+        });
+
+        EditText info = findViewById(R.id.info);
+        info.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mInfo = String.valueOf(s);
+            }
+        });
     }
 
     public void initialize(){
@@ -138,7 +260,7 @@ public class MedicalActivity extends AppCompatActivity implements NavigationView
                 "\"queue\":\"" + mQueue + "\"," +
                 "\"info\":\"" + mInfo + "\"}";
 
-        String url = "http://192.168.0.83:8090/api/med";
+        String url = "https://ar-appglasses.herokuapp.com/api/med";
 
         OkHttpClient client = new OkHttpClient();
 

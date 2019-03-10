@@ -13,13 +13,14 @@
     <string name="datetime">Время ранения</string>
     <string name="antibiotic">Антибиотик</string>
     <string name="Comm">Произведено:</string>
-    <string name="anatoxin_name">Анатоксин (какой))</string>
+    <string name="anatoxin_name">Анатоксин (какой)</string>
     <string name="anatoxin_doze">Доза анатоксина</string>
     <string name="antidote_name">Антидот (какой)</string>
     <string name="antidote_doze">Доза антидота</string>
     <string name="anaestetic">Обезболивающие средства</string>
     <string name="wound_location">Место ранения</string>
     <string name="diagnosis">Диагноз</string>
+    <string name="serrum">serrum</string>
 
     <string-array name="ser">
         <item>ПСС</item>
@@ -66,9 +67,9 @@
     </string-array>
 
     <string-array name="place">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>Омедб</item>
+        <item>Омедо</item>
+        <item>ВГ</item>
     </string-array>
 
 

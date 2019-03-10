@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.vserg.myapplication.MedicalActivity"
-    tools:ignore="ExtraText">
     tools:showIn="@layout/app_bar_medical">
 
     <ScrollView
@@ -169,6 +168,7 @@
 
             <Spinner
                 android:id="@+id/serrum"
+                android:hint="@string/serrum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

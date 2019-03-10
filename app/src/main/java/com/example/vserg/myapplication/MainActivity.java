@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity
                 ", \"unit\":\"unit\"" +
                 ", \"number\":\"" + num + "\"}";
 
-        String url = "http://192.168.0.83:8090/api/card";
+        String url = "https://ar-appglasses.herokuapp.com/api/card";
 
         OkHttpClient client = new OkHttpClient();
 
