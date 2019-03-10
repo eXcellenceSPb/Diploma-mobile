@@ -21,6 +21,8 @@
     <string name="wound_location">Место ранения</string>
     <string name="diagnosis">Диагноз</string>
     <string name="serrum">serrum</string>
+    <string name="ВЧ">В/Ч</string>
+    <string name="info">Доп.инфо</string>
 
     <string-array name="ser">
         <item>ПСС</item>

@@ -23,6 +23,10 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity
     private String fname;
     private String lname;
     private String rank;
+    private String unit;
     private String num;
 
     @Override
@@ -63,8 +68,10 @@ public class MainActivity extends AppCompatActivity
         name.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
             @Override
             public void afterTextChanged(Editable s) {}
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 fname = String.valueOf(s);
@@ -74,8 +81,10 @@ public class MainActivity extends AppCompatActivity
         lastname.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
             @Override
             public void afterTextChanged(Editable s) {}
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 lname = String.valueOf(s);
@@ -87,9 +96,22 @@ public class MainActivity extends AppCompatActivity
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
             public void afterTextChanged(Editable s) {}
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 rank = String.valueOf(s);
+            }
+        });
+
+        EditText uni = findViewById(R.id.unit);
+        uni.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void afterTextChanged(Editable s) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                unit = String.valueOf(s);
             }
         });
 
@@ -97,8 +119,10 @@ public class MainActivity extends AppCompatActivity
         number.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
             @Override
             public void afterTextChanged(Editable s) {}
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 num = String.valueOf(s);
@@ -107,7 +131,7 @@ public class MainActivity extends AppCompatActivity
 
         Button buttonSend = findViewById(R.id.sendc);
         buttonSend.setOnClickListener(view -> {
-            postJson(fname, lname, rank, num);
+            postJson(fname, lname, rank, unit, num);
             onClick();
         });
     }
@@ -163,13 +187,17 @@ public class MainActivity extends AppCompatActivity
         toast.show();
     }
 
-    public void postJson(String name, String lname, String rank, String num) {
+    public void postJson(String name, String lname, String rank,String unit, String num) {
+        Date currentDate = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
+        String date = dateFormat.format(currentDate);
+
         String jsonStr = "{\"organisation\":\"mobile\"," +
-                " \"date\":\"date\"," +
+                " \"date\":\"" + date + "\"," +
                 " \"firstname\":\"" + name + "\"" +
                 ", \"lastname\":\"" + lname + "\"" +
                 ", \"rank\":\"" + rank + "\"" +
-                ", \"unit\":\"unit\"" +
+                ", \"unit\":\"" + unit + "\"" +
                 ", \"number\":\"" + num + "\"}";
 
         String url = "https://ar-appglasses.herokuapp.com/api/card";
